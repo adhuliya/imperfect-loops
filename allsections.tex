@@ -3,6 +3,7 @@ This report is an attempt to explain optimizations in presence of imperfectly ne
 
 \section{A Short Overview}
 When an imperfectly loop nest (\prettyref{sec:imperfectloops}) is encountered, the actions taken can be categorised into the following cases:
+\margintext{An algorithmic approach is discussed ahead}
 \begin{description}
     \item[Case 1] \emph{When the outermost loop can be parallelized}, parallelize the loop and move further into its body to look for more optimizations.
     \item[Case 2] If the \emph{outermost loop cannot be parallelized}, then maximally distributing it around the statements in its body, can be an effective transformation. This step will create further loop nests, which may lead to the following cases:
